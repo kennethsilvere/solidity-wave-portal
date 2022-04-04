@@ -1,0 +1,1047 @@
+{
+    "contractName": "WavePortal",
+    "abi": [
+        {
+            "inputs": [],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "inputs": [],
+            "name": "getTotalWaves",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "keepTrackOfWhoWaved",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "wave",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"getTotalWaves\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"keepTrackOfWhoWaved\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"wave\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/kenneth/Desktop/buildspace/my-wave-portal/contracts/WavePortal.sol\":\"WavePortal\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/kenneth/Desktop/buildspace/my-wave-portal/contracts/WavePortal.sol\":{\"keccak256\":\"0xa046df8bf75f77d152046b153d8c45667be489d18cb0107cebdc65a9ce3ea30d\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://69456a0a7ab446a8b0c43d311d29cb33e847a9e0d7fd46c17f3679baeed45af0\",\"dweb:/ipfs/QmbJxTaY4aZYj4NP6jDQnE1QCVf8CVL9JEYV4KygZ3PhCs\"]},\"/home/kenneth/Desktop/buildspace/my-wave-portal/node_modules/hardhat/console.sol\":{\"keccak256\":\"0x72b6a1d297cd3b033d7c2e4a7e7864934bb767db6453623f1c3082c6534547f4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a8cb8681076e765c214e0d51cac989325f6b98e315eaae06ee0cbd5a9f084763\",\"dweb:/ipfs/QmNWGHi4zmjxQTYN3NMGnJd49jBT5dE4bxTdWEaDuJrC6N\"]}},\"version\":1}",
+    "bytecode": "608060405234801561001057600080fd5b5061003c60405180606001604052806025815260200161053e6025913961004160201b61018f1760201c565b610101565b6100888160405160240161005591906100ac565b60408051601f198184030181529190526020810180516001600160e01b0390811663104c13eb60e21b1790915261008b16565b50565b80516a636f6e736f6c652e6c6f67602083016000808483855afa5050505050565b600060208083528351808285015260005b818110156100d9578581018301518582016040015282016100bd565b818111156100eb576000604083870101525b50601f01601f1916929092016040019392505050565b61042e806101106000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80636fe15b44146100465780639a2cdc08146100505780639cbcc7821461006a575b600080fd5b61004e610072565b005b6100586100c7565b60405190815260200160405180910390f35b61004e610103565b600080549080610081836102e6565b91905055506100bd604051806040016040528060158152602001742573206a75737420776176656420617420796f752160581b815250336101d5565b6100c5610103565b565b60006100fc6040518060400160405280600f81526020016e151bdd185b081dd85d995cce880959608a1b81525060005461021e565b5060005490565b33600090815260016020819052604082208054919290916101259084906102ff565b909155505033600090815260016020526040902054156100c557604080518082018252601d81527f25732068617320776176656420617420796f752025642074696d6573210000006020808301919091523360008181526001909252929020546100c59290610263565b6101d2816040516024016101a39190610364565b60408051601f198184030181529190526020810180516001600160e01b031663104c13eb60e21b1790526102af565b50565b61021a82826040516024016101eb92919061037e565b60408051601f198184030181529190526020810180516001600160e01b031663319af33360e01b1790526102af565b5050565b61021a82826040516024016102349291906103a8565b60408051601f198184030181529190526020810180516001600160e01b03166309710a9d60e41b1790526102af565b6102aa83838360405160240161027b939291906103ca565b60408051601f198184030181529190526020810180516001600160e01b03166307c8121760e01b1790526102af565b505050565b80516a636f6e736f6c652e6c6f67602083016000808483855afa5050505050565b634e487b7160e01b600052601160045260246000fd5b6000600182016102f8576102f86102d0565b5060010190565b60008219821115610312576103126102d0565b500190565b6000815180845260005b8181101561033d57602081850181015186830182015201610321565b8181111561034f576000602083870101525b50601f01601f19169290920160200192915050565b6020815260006103776020830184610317565b9392505050565b6040815260006103916040830185610317565b905060018060a01b03831660208301529392505050565b6040815260006103bb6040830185610317565b90508260208301529392505050565b6060815260006103dd6060830186610317565b6001600160a01b03949094166020830152506040015291905056fea26469706673582212209434009c02cb3a740487fefeecd1c3bf383393ac4887af6185f8b4e7e972676d64736f6c634300080d0033596f20796f2c204920616d206120636f6e747261637420616e64204920616d20736d617274",
+    "deployedBytecode": "608060405234801561001057600080fd5b50600436106100415760003560e01c80636fe15b44146100465780639a2cdc08146100505780639cbcc7821461006a575b600080fd5b61004e610072565b005b6100586100c7565b60405190815260200160405180910390f35b61004e610103565b600080549080610081836102e6565b91905055506100bd604051806040016040528060158152602001742573206a75737420776176656420617420796f752160581b815250336101d5565b6100c5610103565b565b60006100fc6040518060400160405280600f81526020016e151bdd185b081dd85d995cce880959608a1b81525060005461021e565b5060005490565b33600090815260016020819052604082208054919290916101259084906102ff565b909155505033600090815260016020526040902054156100c557604080518082018252601d81527f25732068617320776176656420617420796f752025642074696d6573210000006020808301919091523360008181526001909252929020546100c59290610263565b6101d2816040516024016101a39190610364565b60408051601f198184030181529190526020810180516001600160e01b031663104c13eb60e21b1790526102af565b50565b61021a82826040516024016101eb92919061037e565b60408051601f198184030181529190526020810180516001600160e01b031663319af33360e01b1790526102af565b5050565b61021a82826040516024016102349291906103a8565b60408051601f198184030181529190526020810180516001600160e01b03166309710a9d60e41b1790526102af565b6102aa83838360405160240161027b939291906103ca565b60408051601f198184030181529190526020810180516001600160e01b03166307c8121760e01b1790526102af565b505050565b80516a636f6e736f6c652e6c6f67602083016000808483855afa5050505050565b634e487b7160e01b600052601160045260246000fd5b6000600182016102f8576102f86102d0565b5060010190565b60008219821115610312576103126102d0565b500190565b6000815180845260005b8181101561033d57602081850181015186830182015201610321565b8181111561034f576000602083870101525b50601f01601f19169290920160200192915050565b6020815260006103776020830184610317565b9392505050565b6040815260006103916040830185610317565b905060018060a01b03831660208301529392505050565b6040815260006103bb6040830185610317565b90508260208301529392505050565b6060815260006103dd6060830186610317565b6001600160a01b03949094166020830152506040015291905056fea26469706673582212209434009c02cb3a740487fefeecd1c3bf383393ac4887af6185f8b4e7e972676d64736f6c634300080d0033",
+    "sourceMap": "157:762:0:-:0;;;250:83;;;;;;;;;;274:52;;;;;;;;;;;;;;;;;;:11;;;;;:52;;:::i;:::-;157:762;;5054:112:1;5103:59;5158:2;5119:42;;;;;;;;:::i;:::-;;;;-1:-1:-1;;5119:42:1;;;;;;;;;;;;;;-1:-1:-1;;;;;5119:42:1;;;-1:-1:-1;;;5119:42:1;;;;5103:15;:59;:::i;:::-;5054:112;:::o;176:288::-;264:14;;129:42;373:2;360:16;;240:21;;264:14;360:16;129:42;400:5;389:68;380:77;;335:126;;176:288;:::o;14:597:2:-;126:4;155:2;184;173:9;166:21;216:6;210:13;259:6;254:2;243:9;239:18;232:34;284:1;294:140;308:6;305:1;302:13;294:140;;;403:14;;;399:23;;393:30;369:17;;;388:2;365:26;358:66;323:10;;294:140;;;452:6;449:1;446:13;443:91;;;522:1;517:2;508:6;497:9;493:22;489:31;482:42;443:91;-1:-1:-1;595:2:2;574:15;-1:-1:-1;;570:29:2;555:45;;;;602:2;551:54;;14:597;-1:-1:-1;;;14:597:2:o;:::-;157:762:0;;;;;;",
+    "deployedSourceMap": "157:762:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;339:141;;;:::i;:::-;;486;;;:::i;:::-;;;160:25:2;;;148:2;133:18;486:141:0;;;;;;;633:284;;;:::i;339:141::-;372:10;:12;;;:10;:12;;;:::i;:::-;;;;;;394:48;;;;;;;;;;;;;;-1:-1:-1;;;394:48:0;;;431:10;394:11;:48::i;:::-;452:21;:19;:21::i;:::-;339:141::o;486:::-;532:7;551:42;;;;;;;;;;;;;;-1:-1:-1;;;551:42:0;;;582:10;;551:11;:42::i;:::-;-1:-1:-1;610:10:0;;;486:141::o;633:284::-;690:10;681:20;;;;705:1;681:20;;;;;;;:25;;705:1;;681:20;;:25;;705:1;;681:25;:::i;:::-;;;;-1:-1:-1;;729:10:0;743:1;720:20;;;:8;:20;;;;;;:24;716:195;;760:140;;;;;;;;;;;;;;;;;;;;838:10;-1:-1:-1;866:20:0;;;:8;:20;;;;;;;760:140;;838:10;760:11;:140::i;5054:112:1:-;5103:59;5158:2;5119:42;;;;;;;;:::i;:::-;;;;-1:-1:-1;;5119:42:1;;;;;;;;;;;;;;-1:-1:-1;;;;;5119:42:1;-1:-1:-1;;;5119:42:1;;;5103:15;:59::i;:::-;5054:112;:::o;6298:136::-;6359:71;6422:2;6426;6375:54;;;;;;;;;:::i;:::-;;;;-1:-1:-1;;6375:54:1;;;;;;;;;;;;;;-1:-1:-1;;;;;6375:54:1;-1:-1:-1;;;6375:54:1;;;6359:15;:71::i;:::-;6298:136;;:::o;5888:130::-;5946:68;6006:2;6010;5962:51;;;;;;;;;:::i;:::-;;;;-1:-1:-1;;5962:51:1;;;;;;;;;;;;;;-1:-1:-1;;;;;5962:51:1;-1:-1:-1;;;5962:51:1;;;5946:15;:68::i;11754:154::-;11824:80;11892:2;11896;11900;11840:63;;;;;;;;;;:::i;:::-;;;;-1:-1:-1;;11840:63:1;;;;;;;;;;;;;;-1:-1:-1;;;;;11840:63:1;-1:-1:-1;;;11840:63:1;;;11824:15;:80::i;:::-;11754:154;;;:::o;176:288::-;264:14;;129:42;373:2;360:16;;240:21;;264:14;360:16;129:42;400:5;389:68;380:77;;335:126;;176:288;:::o;196:127:2:-;257:10;252:3;248:20;245:1;238:31;288:4;285:1;278:15;312:4;309:1;302:15;328:135;367:3;388:17;;;385:43;;408:18;;:::i;:::-;-1:-1:-1;455:1:2;444:13;;328:135::o;468:128::-;508:3;539:1;535:6;532:1;529:13;526:39;;;545:18;;:::i;:::-;-1:-1:-1;581:9:2;;468:128::o;601:472::-;643:3;681:5;675:12;708:6;703:3;696:19;733:1;743:162;757:6;754:1;751:13;743:162;;;819:4;875:13;;;871:22;;865:29;847:11;;;843:20;;836:59;772:12;743:162;;;923:6;920:1;917:13;914:87;;;989:1;982:4;973:6;968:3;964:16;960:27;953:38;914:87;-1:-1:-1;1055:2:2;1034:15;-1:-1:-1;;1030:29:2;1021:39;;;;1062:4;1017:50;;601:472;-1:-1:-1;;601:472:2:o;1078:220::-;1227:2;1216:9;1209:21;1190:4;1247:45;1288:2;1277:9;1273:18;1265:6;1247:45;:::i;:::-;1239:53;1078:220;-1:-1:-1;;;1078:220:2:o;1303:317::-;1480:2;1469:9;1462:21;1443:4;1500:45;1541:2;1530:9;1526:18;1518:6;1500:45;:::i;:::-;1492:53;;1610:1;1606;1601:3;1597:11;1593:19;1585:6;1581:32;1576:2;1565:9;1561:18;1554:60;1303:317;;;;;:::o;1625:291::-;1802:2;1791:9;1784:21;1765:4;1822:45;1863:2;1852:9;1848:18;1840:6;1822:45;:::i;:::-;1814:53;;1903:6;1898:2;1887:9;1883:18;1876:34;1625:291;;;;;:::o;1921:388::-;2126:2;2115:9;2108:21;2089:4;2146:45;2187:2;2176:9;2172:18;2164:6;2146:45;:::i;:::-;-1:-1:-1;;;;;2227:32:2;;;;2222:2;2207:18;;2200:60;-1:-1:-1;2291:2:2;2276:18;2269:34;2138:53;1921:388;-1:-1:-1;1921:388:2:o",
+    "sourcePath": "/home/kenneth/Desktop/buildspace/my-wave-portal/contracts/WavePortal.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.13+commit.abaa5c0e"
+    },
+    "ast": {
+        "absolutePath": "/home/kenneth/Desktop/buildspace/my-wave-portal/contracts/WavePortal.sol",
+        "exportedSymbols": {
+            "WavePortal": [
+                83
+            ],
+            "console": [
+                8147
+            ]
+        },
+        "id": 84,
+        "license": "UNLICENSED",
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 1,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.8",
+                    ".4"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "40:23:0"
+            },
+            {
+                "absolutePath": "/home/kenneth/Desktop/buildspace/my-wave-portal/node_modules/hardhat/console.sol",
+                "file": "/home/kenneth/Desktop/buildspace/my-wave-portal/node_modules/hardhat/console.sol",
+                "id": 2,
+                "nameLocation": "-1:-1:-1",
+                "nodeType": "ImportDirective",
+                "scope": 84,
+                "sourceUnit": 8148,
+                "src": "65:90:0",
+                "symbolAliases": [],
+                "unitAlias": ""
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "canonicalName": "WavePortal",
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 83,
+                "linearizedBaseContracts": [
+                    83
+                ],
+                "name": "WavePortal",
+                "nameLocation": "166:10:0",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": false,
+                        "id": 4,
+                        "mutability": "mutable",
+                        "name": "totalWaves",
+                        "nameLocation": "191:10:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 83,
+                        "src": "183:18:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                        },
+                        "typeName": {
+                            "id": 3,
+                            "name": "uint256",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "183:7:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                            }
+                        },
+                        "visibility": "internal"
+                    },
+                    {
+                        "constant": false,
+                        "id": 8,
+                        "mutability": "mutable",
+                        "name": "whoWaved",
+                        "nameLocation": "235:8:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 83,
+                        "src": "207:36:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                            "typeString": "mapping(address => uint256)"
+                        },
+                        "typeName": {
+                            "id": 7,
+                            "keyType": {
+                                "id": 5,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "215:7:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                }
+                            },
+                            "nodeType": "Mapping",
+                            "src": "207:27:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                "typeString": "mapping(address => uint256)"
+                            },
+                            "valueType": {
+                                "id": 6,
+                                "name": "uint256",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "226:7:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                }
+                            }
+                        },
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": {
+                            "id": 17,
+                            "nodeType": "Block",
+                            "src": "264:69:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "hexValue": "596f20796f2c204920616d206120636f6e747261637420616e64204920616d20736d617274",
+                                                "id": 14,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "string",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "286:39:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_stringliteral_5a508d85c4ec431af0386a0ad20ddd878cd221a9c818110892e15d28cc7f2ace",
+                                                    "typeString": "literal_string \"Yo yo, I am a contract and I am smart\""
+                                                },
+                                                "value": "Yo yo, I am a contract and I am smart"
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_stringliteral_5a508d85c4ec431af0386a0ad20ddd878cd221a9c818110892e15d28cc7f2ace",
+                                                    "typeString": "literal_string \"Yo yo, I am a contract and I am smart\""
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 11,
+                                                "name": "console",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 8147,
+                                                "src": "274:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_type$_t_contract$_console_$8147_$",
+                                                    "typeString": "type(library console)"
+                                                }
+                                            },
+                                            "id": 13,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "log",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 678,
+                                            "src": "274:11:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_internal_view$_t_string_memory_ptr_$returns$__$",
+                                                "typeString": "function (string memory) view"
+                                            }
+                                        },
+                                        "id": 15,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "274:52:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 16,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "274:52:0"
+                                }
+                            ]
+                        },
+                        "id": 18,
+                        "implemented": true,
+                        "kind": "constructor",
+                        "modifiers": [],
+                        "name": "",
+                        "nameLocation": "-1:-1:-1",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "261:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 10,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "264:0:0"
+                        },
+                        "scope": 83,
+                        "src": "250:83:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 35,
+                            "nodeType": "Block",
+                            "src": "362:118:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "id": 22,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "nodeType": "UnaryOperation",
+                                        "operator": "++",
+                                        "prefix": false,
+                                        "src": "372:12:0",
+                                        "subExpression": {
+                                            "id": 21,
+                                            "name": "totalWaves",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 4,
+                                            "src": "372:10:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 23,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "372:12:0"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "hexValue": "2573206a75737420776176656420617420796f7521",
+                                                "id": 27,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "string",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "406:23:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_stringliteral_ce2b2769b46dbf5d7b6f9a15c0bd4c6b4176b0a43abaeec0b1524c6fde2fa5cb",
+                                                    "typeString": "literal_string \"%s just waved at you!\""
+                                                },
+                                                "value": "%s just waved at you!"
+                                            },
+                                            {
+                                                "expression": {
+                                                    "id": 28,
+                                                    "name": "msg",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4294967281,
+                                                    "src": "431:3:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_magic_message",
+                                                        "typeString": "msg"
+                                                    }
+                                                },
+                                                "id": 29,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberName": "sender",
+                                                "nodeType": "MemberAccess",
+                                                "src": "431:10:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_stringliteral_ce2b2769b46dbf5d7b6f9a15c0bd4c6b4176b0a43abaeec0b1524c6fde2fa5cb",
+                                                    "typeString": "literal_string \"%s just waved at you!\""
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 24,
+                                                "name": "console",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 8147,
+                                                "src": "394:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_type$_t_contract$_console_$8147_$",
+                                                    "typeString": "type(library console)"
+                                                }
+                                            },
+                                            "id": 26,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "log",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 842,
+                                            "src": "394:11:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_internal_view$_t_string_memory_ptr_$_t_address_$returns$__$",
+                                                "typeString": "function (string memory,address) view"
+                                            }
+                                        },
+                                        "id": 30,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "394:48:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 31,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "394:48:0"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [],
+                                        "expression": {
+                                            "argumentTypes": [],
+                                            "id": 32,
+                                            "name": "keepTrackOfWhoWaved",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 82,
+                                            "src": "452:19:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                                                "typeString": "function ()"
+                                            }
+                                        },
+                                        "id": 33,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "452:21:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 34,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "452:21:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "6fe15b44",
+                        "id": 36,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "wave",
+                        "nameLocation": "348:4:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 19,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "352:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 20,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "362:0:0"
+                        },
+                        "scope": 83,
+                        "src": "339:141:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 50,
+                            "nodeType": "Block",
+                            "src": "541:86:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "hexValue": "546f74616c2077617665733a202564",
+                                                "id": 44,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "string",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "563:17:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_stringliteral_f9b449a57c6645be270144615762f3bfd270f374120e1c28a23d5295b5ff028b",
+                                                    "typeString": "literal_string \"Total waves: %d\""
+                                                },
+                                                "value": "Total waves: %d"
+                                            },
+                                            {
+                                                "id": 45,
+                                                "name": "totalWaves",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 4,
+                                                "src": "582:10:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_stringliteral_f9b449a57c6645be270144615762f3bfd270f374120e1c28a23d5295b5ff028b",
+                                                    "typeString": "literal_string \"Total waves: %d\""
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 41,
+                                                "name": "console",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 8147,
+                                                "src": "551:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_type$_t_contract$_console_$8147_$",
+                                                    "typeString": "type(library console)"
+                                                }
+                                            },
+                                            "id": 43,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "log",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 791,
+                                            "src": "551:11:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_internal_view$_t_string_memory_ptr_$_t_uint256_$returns$__$",
+                                                "typeString": "function (string memory,uint256) view"
+                                            }
+                                        },
+                                        "id": 46,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "551:42:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 47,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "551:42:0"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 48,
+                                        "name": "totalWaves",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": 4,
+                                        "src": "610:10:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "functionReturnParameters": 40,
+                                    "id": 49,
+                                    "nodeType": "Return",
+                                    "src": "603:17:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "9a2cdc08",
+                        "id": 51,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "getTotalWaves",
+                        "nameLocation": "495:13:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 37,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "508:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 40,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 39,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nameLocation": "-1:-1:-1",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 51,
+                                    "src": "532:7:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 38,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "532:7:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "531:9:0"
+                        },
+                        "scope": 83,
+                        "src": "486:141:0",
+                        "stateMutability": "view",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 81,
+                            "nodeType": "Block",
+                            "src": "671:246:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "id": 59,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "baseExpression": {
+                                                "id": 54,
+                                                "name": "whoWaved",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 8,
+                                                "src": "681:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                                    "typeString": "mapping(address => uint256)"
+                                                }
+                                            },
+                                            "id": 57,
+                                            "indexExpression": {
+                                                "expression": {
+                                                    "id": 55,
+                                                    "name": "msg",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4294967281,
+                                                    "src": "690:3:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_magic_message",
+                                                        "typeString": "msg"
+                                                    }
+                                                },
+                                                "id": 56,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberName": "sender",
+                                                "nodeType": "MemberAccess",
+                                                "src": "690:10:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": true,
+                                            "nodeType": "IndexAccess",
+                                            "src": "681:20:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "+=",
+                                        "rightHandSide": {
+                                            "hexValue": "31",
+                                            "id": 58,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "kind": "number",
+                                            "lValueRequested": false,
+                                            "nodeType": "Literal",
+                                            "src": "705:1:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_rational_1_by_1",
+                                                "typeString": "int_const 1"
+                                            },
+                                            "value": "1"
+                                        },
+                                        "src": "681:25:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 60,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "681:25:0"
+                                },
+                                {
+                                    "condition": {
+                                        "commonType": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        },
+                                        "id": 66,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftExpression": {
+                                            "baseExpression": {
+                                                "id": 61,
+                                                "name": "whoWaved",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 8,
+                                                "src": "720:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                                    "typeString": "mapping(address => uint256)"
+                                                }
+                                            },
+                                            "id": 64,
+                                            "indexExpression": {
+                                                "expression": {
+                                                    "id": 62,
+                                                    "name": "msg",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4294967281,
+                                                    "src": "729:3:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_magic_message",
+                                                        "typeString": "msg"
+                                                    }
+                                                },
+                                                "id": 63,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberName": "sender",
+                                                "nodeType": "MemberAccess",
+                                                "src": "729:10:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "nodeType": "IndexAccess",
+                                            "src": "720:20:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "BinaryOperation",
+                                        "operator": ">",
+                                        "rightExpression": {
+                                            "hexValue": "30",
+                                            "id": 65,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "kind": "number",
+                                            "lValueRequested": false,
+                                            "nodeType": "Literal",
+                                            "src": "743:1:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_rational_0_by_1",
+                                                "typeString": "int_const 0"
+                                            },
+                                            "value": "0"
+                                        },
+                                        "src": "720:24:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bool",
+                                            "typeString": "bool"
+                                        }
+                                    },
+                                    "id": 80,
+                                    "nodeType": "IfStatement",
+                                    "src": "716:195:0",
+                                    "trueBody": {
+                                        "id": 79,
+                                        "nodeType": "Block",
+                                        "src": "746:165:0",
+                                        "statements": [
+                                            {
+                                                "expression": {
+                                                    "arguments": [
+                                                        {
+                                                            "hexValue": "25732068617320776176656420617420796f752025642074696d657321",
+                                                            "id": 70,
+                                                            "isConstant": false,
+                                                            "isLValue": false,
+                                                            "isPure": true,
+                                                            "kind": "string",
+                                                            "lValueRequested": false,
+                                                            "nodeType": "Literal",
+                                                            "src": "789:31:0",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_stringliteral_24b7898ef89580882a45bd0cf343cf5ef63b30f8edb935ae46a6e6ea437bd515",
+                                                                "typeString": "literal_string \"%s has waved at you %d times!\""
+                                                            },
+                                                            "value": "%s has waved at you %d times!"
+                                                        },
+                                                        {
+                                                            "expression": {
+                                                                "id": 71,
+                                                                "name": "msg",
+                                                                "nodeType": "Identifier",
+                                                                "overloadedDeclarations": [],
+                                                                "referencedDeclaration": 4294967281,
+                                                                "src": "838:3:0",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_magic_message",
+                                                                    "typeString": "msg"
+                                                                }
+                                                            },
+                                                            "id": 72,
+                                                            "isConstant": false,
+                                                            "isLValue": false,
+                                                            "isPure": false,
+                                                            "lValueRequested": false,
+                                                            "memberName": "sender",
+                                                            "nodeType": "MemberAccess",
+                                                            "src": "838:10:0",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_address",
+                                                                "typeString": "address"
+                                                            }
+                                                        },
+                                                        {
+                                                            "baseExpression": {
+                                                                "id": 73,
+                                                                "name": "whoWaved",
+                                                                "nodeType": "Identifier",
+                                                                "overloadedDeclarations": [],
+                                                                "referencedDeclaration": 8,
+                                                                "src": "866:8:0",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                                                    "typeString": "mapping(address => uint256)"
+                                                                }
+                                                            },
+                                                            "id": 76,
+                                                            "indexExpression": {
+                                                                "expression": {
+                                                                    "id": 74,
+                                                                    "name": "msg",
+                                                                    "nodeType": "Identifier",
+                                                                    "overloadedDeclarations": [],
+                                                                    "referencedDeclaration": 4294967281,
+                                                                    "src": "875:3:0",
+                                                                    "typeDescriptions": {
+                                                                        "typeIdentifier": "t_magic_message",
+                                                                        "typeString": "msg"
+                                                                    }
+                                                                },
+                                                                "id": 75,
+                                                                "isConstant": false,
+                                                                "isLValue": false,
+                                                                "isPure": false,
+                                                                "lValueRequested": false,
+                                                                "memberName": "sender",
+                                                                "nodeType": "MemberAccess",
+                                                                "src": "875:10:0",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_address",
+                                                                    "typeString": "address"
+                                                                }
+                                                            },
+                                                            "isConstant": false,
+                                                            "isLValue": true,
+                                                            "isPure": false,
+                                                            "lValueRequested": false,
+                                                            "nodeType": "IndexAccess",
+                                                            "src": "866:20:0",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_uint256",
+                                                                "typeString": "uint256"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "expression": {
+                                                        "argumentTypes": [
+                                                            {
+                                                                "typeIdentifier": "t_stringliteral_24b7898ef89580882a45bd0cf343cf5ef63b30f8edb935ae46a6e6ea437bd515",
+                                                                "typeString": "literal_string \"%s has waved at you %d times!\""
+                                                            },
+                                                            {
+                                                                "typeIdentifier": "t_address",
+                                                                "typeString": "address"
+                                                            },
+                                                            {
+                                                                "typeIdentifier": "t_uint256",
+                                                                "typeString": "uint256"
+                                                            }
+                                                        ],
+                                                        "expression": {
+                                                            "id": 67,
+                                                            "name": "console",
+                                                            "nodeType": "Identifier",
+                                                            "overloadedDeclarations": [],
+                                                            "referencedDeclaration": 8147,
+                                                            "src": "760:7:0",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_type$_t_contract$_console_$8147_$",
+                                                                "typeString": "type(library console)"
+                                                            }
+                                                        },
+                                                        "id": 69,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": false,
+                                                        "lValueRequested": false,
+                                                        "memberName": "log",
+                                                        "nodeType": "MemberAccess",
+                                                        "referencedDeclaration": 1558,
+                                                        "src": "760:11:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_function_internal_view$_t_string_memory_ptr_$_t_address_$_t_uint256_$returns$__$",
+                                                            "typeString": "function (string memory,address,uint256) view"
+                                                        }
+                                                    },
+                                                    "id": 77,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "kind": "functionCall",
+                                                    "lValueRequested": false,
+                                                    "names": [],
+                                                    "nodeType": "FunctionCall",
+                                                    "src": "760:140:0",
+                                                    "tryCall": false,
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_tuple$__$",
+                                                        "typeString": "tuple()"
+                                                    }
+                                                },
+                                                "id": 78,
+                                                "nodeType": "ExpressionStatement",
+                                                "src": "760:140:0"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        "functionSelector": "9cbcc782",
+                        "id": 82,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "keepTrackOfWhoWaved",
+                        "nameLocation": "642:19:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 52,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "661:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 53,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "671:0:0"
+                        },
+                        "scope": 83,
+                        "src": "633:284:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 84,
+                "src": "157:762:0",
+                "usedErrors": []
+            }
+        ],
+        "src": "40:880:0"
+    },
+    "functionHashes": {
+        "getTotalWaves()": "9a2cdc08",
+        "keepTrackOfWhoWaved()": "9cbcc782",
+        "wave()": "6fe15b44"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "214000",
+            "executionCost": "infinite",
+            "totalCost": "infinite"
+        },
+        "external": {
+            "getTotalWaves()": "infinite",
+            "keepTrackOfWhoWaved()": "infinite",
+            "wave()": "infinite"
+        }
+    }
+}
